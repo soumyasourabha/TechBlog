@@ -13,13 +13,13 @@ app.use(express.json())
 
 //middleware
 const userRoute = require('./routes/User');
-app.use('/bloghub',userRoute)
+app.use('/',userRoute)
 
 const postRoute = require('./routes/Posts');
-app.use('/bloghub/posts',postRoute)
+app.use('/posts',postRoute)
 
 const commentRoute = require('./routes/Comments');
-app.use('/bloghub/posts/post',commentRoute)
+app.use('/posts/post',commentRoute)
 
 //db connection
 mongoose.connect(process.env.DB_CONNECTION,
