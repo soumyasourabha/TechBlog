@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
-    _id : {type : String},
+    _id : {type : mongoose.Schema.Types.ObjectId},
     title : {type  : String, required : true},
     description : {type  : String, required : true},
     likes : {type  : String, required : true},
